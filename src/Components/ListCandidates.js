@@ -35,7 +35,7 @@ function ListCandidates() {
                     {contacts.map((contact, index) => {
                         return (
                             <div key={index}>
-                                <div className="card w-50 mb-3 mt-3 d-flex flex-row">
+                                <div className="card w-100 mb-3 ml-5 mr-5 mt-3 d-flex flex-row">
                                     <div className="card-body d-flex">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16">
                                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />

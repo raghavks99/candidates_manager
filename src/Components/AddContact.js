@@ -15,17 +15,19 @@ const AddContact = () => {
     }
 
     const handleClick = async () => {
-        await axios.post('http://localhost:3006/candidates', { id: Date.now(), userName: text_value, Designation: designation })
-            .then(req => console.log(req))
-            .catch(err => console.log(err))
+        if (text_value && designation) {
+            await axios.post('http://localhost:3006/candidates', { id: Date.now(), userName: text_value, Designation: designation })
+                .then(req => console.log(req))
+                .catch(err => console.log(err))
 
-        setAbout('');
-        setValue('');
-        setAlert(true);
+            setAbout('');
+            setValue('');
+            setAlert(true);
 
-        setTimeout(() => {
-            setAlert(false);
-        }, 3000);
+            setTimeout(() => {
+                setAlert(false);
+            }, 3000);
+        }
     }
 
 
@@ -36,9 +38,9 @@ const AddContact = () => {
             </div>
             {showAlert ? <div class="alert alert-success alert-dismissible fade show" role="alert">
                 The new candidate is successfully added
-                <button type="button" onClick = {() => setAlert(false)} class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" onClick={() => setAlert(false)} class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div> : <div> </div>}
-            <div className="card w-50" style={{ marginTop: '20px', marginLeft: '24%', borderWidth: '10px' }}>
+            <div className="card w-70" style={{ marginTop: '10%', marginLeft: '20%', marginRight: '20%', borderWidth: '10px' }}>
                 <div className="card-body d-flex">
                     <div className='container-fluid d-flex flex-column'>
                         <div className="form-group mt-3 mb-3 w-3">
