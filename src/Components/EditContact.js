@@ -53,7 +53,7 @@ function EditContact() {
               <label for="usr">Designation</label>
               <input type="usr" className="form-control" id="usr" value={desig} onChange={handleDesignation} />
             </div>
-            <button type="button" className="btn btn-primary align-self-baseline mt-3" style={{ float: 'left' }} onClick={handleSubmit}>Submit</button>
+            <button type="button" className="btn btn-primary align-self-baseline mt-3" style={{ float: 'left' }} onClick={handleSubmit}>Update</button>
           </div>
         </div>
       </div>
